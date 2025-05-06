@@ -4,23 +4,42 @@
     box-sizing: border-box;
 }
 
+/* 
+html {
+    font-size: 16px;
+} */
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: black;
     text-align: center;
     color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 1600px;
 }
 
 header {
     white-space: nowrap;
-    margin: 24px 0;
+    margin: 3rem 0;
+    text-align: center;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
-    margin: 30px 0;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10rem;
+    margin: 3rem 0;
 }
 
 .phone,
@@ -28,25 +47,34 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .phone a,
 footer a {
     color: aquamarine;
-    font-size: 16px;
     text-decoration: underline;
-    margin: 32px 0;
+    margin: 2rem 0;
 }
 
-.info h2, footer h2 {
+.phone video {
+    height: 50rem;
+}
+
+.info h2,
+footer h2 {
     font-weight: 300;
-    font-size: 42px;
+    font-size: 2rem;
 }
 
 .info p {
-    font-size: 21px;
+    font-size: 1.5rem;
     color: gray;
-    margin: 32px 0;
+    margin: 2rem 0;
+}
+
+.info img {
+    width: 70%;
 }
 
 footer {
@@ -57,12 +85,28 @@ footer {
 }
 
 footer img {
-    width: 80px;
-    margin-bottom: 32px;
+    width: 5rem;
+    margin-bottom: 2rem;
 }
 
 footer p {
     align-self: flex-end;
-    margin: 8px;
+    margin: 0.5rem;
     color: gray;
+}
+
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
+    .phone video {
+        height: 40rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 10px;
+    }
 }
